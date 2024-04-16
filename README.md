@@ -43,11 +43,20 @@ $ node index.js
 
 ### Running Load Tests
 Close all running applications, then run the following commands to run load test on each web server
-```sh
+
 Load Test on Golang Webserver
+
+```sh
 $ ab -n 2000 -c 50 http://127.0.0.1:4000/
+```
+
 Load Test on NodeJs Webserver(Without Worker)
+```sh
 $ ab -n 2000 -c 50 http://127.0.0.1:3000/
+``
+
+
 Load Test on NodeJs Webserver(With Worker Cluster)
+```sh
 $ ab -n 2000 -c 50 http://127.0.0.1:8000/calc
 ```
